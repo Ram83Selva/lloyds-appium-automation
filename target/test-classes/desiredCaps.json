@@ -1,0 +1,10 @@
+[
+	"caps": {
+				"deviceName": "realme C35",
+			  	"udid", "0G02419R100032C1",
+			  	"platformName", "Android",
+			  	"platformVersion", "11",
+			  	"appPackage", "com.google.android.calculator", 
+			  	"appActivity", "com.android.calculator2.Calculator"
+			}
+]
