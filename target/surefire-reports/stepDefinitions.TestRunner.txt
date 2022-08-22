@@ -1,15 +1,15 @@
 -------------------------------------------------------------------------------
 Test set: stepDefinitions.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 121.729 s <<< FAILURE! - in stepDefinitions.TestRunner
-Verify the Car Rental component(Test and Verify the Dashboard and three main components such as Flight, Hotels and Car Rentals)  Time elapsed: 31.946 s  <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 43.115 s <<< FAILURE! - in stepDefinitions.TestRunner
+Verify the Car Rental component(Test and Verify the Dashboard and three main components such as Flight, Hotels and Car Rentals)  Time elapsed: 42.144 s  <<< ERROR!
 org.openqa.selenium.NoSuchElementException: 
 An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-PG3K8RC', ip: '192.168.0.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+System info: host: 'DESKTOP-PG3K8RC', ip: '192.168.42.35', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
 Driver info: io.appium.java_client.AppiumDriver
-Capabilities {appActivity: net.skyscanner.shell.ui.act..., appPackage: net.skyscanner.android.main, databaseEnabled: false, desired: {appActivity: net.skyscanner.shell.ui.act..., appPackage: net.skyscanner.android.main, deviceName: realme C35, platformName: android, platformVersion: 11, udid: 0G02419R100032C1}, deviceApiLevel: 30, deviceManufacturer: realme, deviceModel: RMX3511, deviceName: 0G02419R100032C1, deviceScreenDensity: 480, deviceScreenSize: 1080x2408, deviceUDID: 0G02419R100032C1, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 96, takesScreenshot: true, udid: 0G02419R100032C1, viewportRect: {height: 2116, left: 0, top: 96, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: dfb7e280-f639-4e31-9271-cf3c7314bcf4
-*** Element info: {Using=xpath, value=//*[@resource-id='net.skyscanner.android.main:id/singleLocationText']}
+Capabilities {appActivity: net.skyscanner.shell.ui.act..., appPackage: net.skyscanner.android.main, databaseEnabled: false, desired: {appActivity: net.skyscanner.shell.ui.act..., appPackage: net.skyscanner.android.main, deviceName: POCO C3, platformName: android, platformVersion: 10, udid: 9PGMMRIVMNYPQWOJ}, deviceApiLevel: 29, deviceManufacturer: Xiaomi, deviceModel: M2006C3MI, deviceName: 9PGMMRIVMNYPQWOJ, deviceScreenDensity: 320, deviceScreenSize: 720x1600, deviceUDID: 9PGMMRIVMNYPQWOJ, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 10, statBarHeight: 55, takesScreenshot: true, udid: 9PGMMRIVMNYPQWOJ, viewportRect: {height: 1394, left: 0, top: 55, width: 720}, warnings: {}, webStorageEnabled: false}
+Session ID: a519c818-17a2-4e0b-a168-d4284ab894e5
+*** Element info: {Using=xpath, value=//android.widget.ImageView[@content-desc='Car Rental']}
 

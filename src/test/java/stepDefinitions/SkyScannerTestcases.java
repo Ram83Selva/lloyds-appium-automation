@@ -1,5 +1,7 @@
 package stepDefinitions;
 
+import static org.junit.Assert.assertEquals;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
@@ -25,8 +27,8 @@ public class SkyScannerTestcases {
 	static DesiredCapabilities cap;
 	static URL url;
 	static BaseDriver baseDriver;
-	@Before
-	public void setUpEnvironment() {
+	//@Before
+	public void setUpEnvironment1() {
 		
 		  cap = new DesiredCapabilities();
 		  cap.setCapability("deviceName", "realme C35");
@@ -35,25 +37,19 @@ public class SkyScannerTestcases {
 		  cap.setCapability("platformVersion", "11");
 		  cap.setCapability("appPackage", "net.skyscanner.android.main"); 
 		  cap.setCapability("appActivity", "net.skyscanner.shell.ui.activity.SplashActivity");
-		  System.out.println("Hello");
 	}
-	/*
-	 * @Given("set the android os environment") public void
-	 * set_the_android_os_environment() { System.out.println("Hello"); cap = new
-	 * DesiredCapabilities(); cap.setCapability("deviceName", "realme C35");
-	 * cap.setCapability("udid", "0G02419R100032C1");
-	 * cap.setCapability("platformName", "Android");
-	 * cap.setCapability("platformVersion", "11");
-	 * 
-	 * }
-	 * 
-	 * @When("set the application package and activity") public void
-	 * set_the_application_package_and_activity() { cap.setCapability("appPackage",
-	 * "net.skyscanner.android.main"); cap.setCapability("appActivity",
-	 * "net.skyscanner.shell.ui.activity.SplashActivity");
-	 * 
-	 * }
-	 */
+	
+	@Before
+	public void setUpEnvironment() {
+		
+		  cap = new DesiredCapabilities();
+		  cap.setCapability("deviceName", "POCO C3");
+		  cap.setCapability("udid", "9PGMMRIVMNYPQWOJ");
+		  cap.setCapability("platformName", "Android");
+		  cap.setCapability("platformVersion", "10");
+		  cap.setCapability("appPackage", "net.skyscanner.android.main"); 
+		  cap.setCapability("appActivity", "net.skyscanner.shell.ui.activity.SplashActivity");
+	}
 	
 	static FlightPageElements flightPageElements;
 	static HotelPageElements hotelPageElements;
@@ -71,7 +67,7 @@ public class SkyScannerTestcases {
 	}
 
 	@Then("allow the cookies by clicking on the ok button")
-	public void allow_the_cookies_by_clicking_on_the_ok_button() {
+	public void allow_the_cookies_by_clicking_on_the_ok_button() throws InterruptedException {
 		flightPageElements.acceptButton.click();
 		flightPageElements.skipButton.click();
 		try {
@@ -114,6 +110,7 @@ public class SkyScannerTestcases {
 		String expectedPrice = flightPageElements.priceExpectedLabel.getText();
 		flightPageElements.priceExpectedLabel.click();
 		String actualPrice = flightPageElements.priceActualLabel.getText();
+		assertEquals(expectedPrice, actualPrice);
 		if(expectedPrice.equals(actualPrice)) {
 			System.out.println("Expected: "+ expectedPrice +" and actual: "+actualPrice+" are same in the checkout screen");
 		}else {
@@ -146,6 +143,7 @@ public class SkyScannerTestcases {
 		}catch(NoSuchElementException e) {
 			 actualHotelPrice = hotelPageElements.actualPriceLabel2.getText();
 		}
+		assertEquals(expectedHotelPrice.replace(" a night", ""), actualHotelPrice.replace(".00", ""));
 		if(expectedHotelPrice.contains(actualHotelPrice.replace(".00", ""))) {
 			System.out.println("Expected: "+ expectedHotelPrice +" and actual: "+actualHotelPrice+" are same in the checkout screen");
 		}else {
@@ -181,6 +179,7 @@ public class SkyScannerTestcases {
 		String expectedPrice = carRentalPageElements.expectedCarPrice.getText();
 		carRentalPageElements.expectedCarPrice.click();
 		String actualPrice = carRentalPageElements.actualCarPrice.getText();
+		assertEquals(expectedPrice, actualPrice);
 		if(expectedPrice.equals(actualPrice)) {
 			System.out.println("Expected: "+ expectedPrice +" and actual: "+actualPrice+" are same in the checkout screen");
 		}else {
